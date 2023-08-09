@@ -1,5 +1,9 @@
 name: Dependabot auto-merge minor/patch
-on: pull_request
+on:
+  workflow_call:
+    secrets:
+      GITHUB_TOKEN:
+        required: false
 
 permissions:
   contents: write
